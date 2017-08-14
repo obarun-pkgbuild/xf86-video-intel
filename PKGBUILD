@@ -4,9 +4,9 @@
 #						Maintainer: Jan de Groot <jgc@archlinux.org>
 
 pkgname=xf86-video-intel
-_commit=c72bb27a3a68ecc616ce2dc8e9a1d20354504562 # master
-pkgver=2.99.917+772+gc72bb27a
-pkgrel=2
+ _commit=2100efa105e8c9615eda867d39471d78e500b1bb # master
+ pkgver=2.99.917+779+g2100efa1
+pkgrel=3
 epoch=1
 arch=(i686 x86_64)
 url="https://01.org/linuxgraphics"
@@ -46,6 +46,14 @@ prepare() {
 
 build() {
   cd $pkgname
+  
+  # Since pacman 5.0.2-2, hardened flags are now enabled in makepkg.conf
+  # With them, module fail to load with undefined symbol.
+  # See https://bugs.archlinux.org/task/55102 / https://bugs.archlinux.org/task/54845
+  export CFLAGS=${CFLAGS/-fno-plt}
+  export CXXFLAGS=${CXXFLAGS/-fno-plt}
+  export LDFLAGS=${LDFLAGS/,-z,now}
+
   ./configure --prefix=/usr \
     --libexecdir=/usr/lib \
     --with-default-dri=3 \
