@@ -4,8 +4,8 @@
 #						Maintainer: Jan de Groot <jgc@archlinux.org>
 
 pkgname=xf86-video-intel
-_commit=c89905754b929f0421db7ea6d60b8942ccdbd8af # master
-pkgver=2.99.917+781+gc8990575
+_commit=04b4f3b7f7b3aa5837854fa2613b3473d7fed7cd # master
+pkgver=2.99.917+796+g04b4f3b7
 pkgrel=2
 epoch=1
 arch=(i686 x86_64)
@@ -13,7 +13,7 @@ url="https://01.org/linuxgraphics"
 license=('custom')
 install=$pkgname.install
 pkgdesc="X.org Intel i810/i830/i915/945G/G965+ video drivers"
-depends=('mesa-dri' 'libxvmc' 'pixman' 'xcb-util>=0.3.9')
+depends=('mesa' 'libxvmc' 'pixman' 'xcb-util>=0.3.9')
 makedepends=('xorg-server-devel' 'X-ABI-VIDEODRV_VERSION=23' 'libx11' 'libxrender'
              # additional deps for intel-virtual-output
              'libxrandr' 'libxinerama' 'libxcursor' 'libxtst' 'libxss'
