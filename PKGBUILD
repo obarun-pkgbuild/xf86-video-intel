@@ -4,11 +4,11 @@
 #						Maintainer: Jan de Groot <jgc@archlinux.org>
 
 pkgname=xf86-video-intel
-_commit=04b4f3b7f7b3aa5837854fa2613b3473d7fed7cd # master
-pkgver=2.99.917+796+g04b4f3b7
+_commit=37a682aa8a420a75a920e0fa7cf8659f834ed60f # master
+pkgver=2.99.917+800+g37a682aa
 pkgrel=2
 epoch=1
-arch=(i686 x86_64)
+arch=(x86_64)
 url="https://01.org/linuxgraphics"
 license=('custom')
 install=$pkgname.install
