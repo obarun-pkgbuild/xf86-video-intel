@@ -4,8 +4,8 @@
 #						Maintainer: Jan de Groot <jgc@archlinux.org>
 
 pkgname=xf86-video-intel
-_commit=26f5406841f3924f23f29df61b5ea53d2816b665 # master
-pkgver=2.99.917+805+g26f54068
+_commit=5c7e4e0e05b37e038c9047e9d6cae118799f6ad2 # master
+pkgver=2.99.917+811+g5c7e4e0e
 pkgrel=2
 epoch=1
 arch=(x86_64)
